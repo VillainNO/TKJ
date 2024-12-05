@@ -1,0 +1,835 @@
+                                                         <!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WEBSITE DATA KELAS XI TKJ 1</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 20px;
+    background: linear-gradient(135deg, #4a90e2, #005f99); /* Gradien biru */
+    color: #fff; /* Teks berwarna putih */
+}
+        h1 {
+            text-align: center;
+            color: #fdfdfd;
+            margin-bottom: 30px;
+        }
+        .container {
+            max-width: 900px;
+            margin: auto;
+            padding: 20px;
+            background: rgb(255, 255, 255);
+            border-radius: 10px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+        }
+        .button-container {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 20px;
+        }
+        button {
+            flex: 1;
+            margin: 0 10px;
+            padding: 10px 15px;
+            background-color: #306c8a;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s, transform 0.3s;
+            font-size: 16px;
+        }
+        .card-container {
+            display: none; /* Awalnya disembunyikan */
+            flex-wrap: wrap;
+            justify-content: space-between;
+        }
+        .card {
+            background: #78a1dd;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            margin: 10px;
+            padding: 20px;
+            flex: 1 1 calc(30% - 20px); /* Ukuran kartu */
+            box-sizing: border-box;
+            transition: transform 0.3s;
+            text-align: center;
+        }
+        .card:hover {
+            transform: translateY(-5px);
+        }
+        .card img {
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            margin-bottom: 10px;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+        th, td {
+            padding: 10px;
+            text-align: center;
+            border: 1px solid #7caef8;
+        }
+        th {
+            background-color: #7fc1ee;
+            color: white;
+        }   
+        .gallery {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            margin-top: 20px;
+        }
+        .gallery img {
+            width: calc(33% - 10px);
+            margin-bottom: 10px;
+            border-radius: 5px;
+            transition: transform 0.3s;
+        }
+        .gallery img:hover {
+            transform: scale(1.05);
+        }
+    </style>
+    <script>
+        function toggleCards(cardType) {
+            const cardContainers = ['siswaCards', 'guruCards', 'piketCards', 'strukturCards', 'gallery', 'jadwalPelajaran', 'kegiatanKelas'];
+    
+            // Validasi cardType
+            if (!cardContainers.includes(cardType)) {
+                console.error(`Invalid cardType: ${cardType}`);
+                return;
+            }
+    
+            // Sembunyikan semua kartu dan tampilkan yang sesuai
+            cardContainers.forEach(id => {
+                const container = document.getElementById(id);
+                if (container) {
+                    if (id === cardType) {
+                        // Tampilkan elemen dengan style sesuai
+                        container.style.display = id === "piketCards" ? "grid" : "flex";
+                    } else {
+                        container.style.display = "none";
+                    }
+                } else {
+                    console.warn(`Element with ID ${id} not found.`);
+                }
+            });
+        }
+    </script>
+</head>
+<body>
+
+    <div class="container">
+        <img src="https://smkntambakboyo.sch.id/wp-content/uploads/2023/09/Logo-SMKN1-Tambakboyo-REV-Tanpa-1-1024x1024.png"width="100px">
+        <h1>web kelas xi tkj</h1>
+        
+
+        <div class="button-container">
+            <button onclick="toggleCards('siswaCards')">Data Siswa</button>
+            <button onclick="toggleCards('guruCards')">Data Guru</button>
+            <button onclick="toggleCards('piketCards')">Piket Kelas</button>
+            <button onclick="toggleCards('strukturCards')">Struktur Kelas</button>
+            <button onclick="toggleCards('gallery')">Galeri Foto</button>
+            <button onclick="toggleCards('jadwalPelajaran')">Jadwal Pelajaran</button>
+            <button onclick="toggleCards('kegiatanKelas')">Kegiatan Kelas</button>
+        </div>
+
+        <div id="siswaCards" class="card-container">
+            <div class="card">
+                <img src="c:\Users\pc 15\Downloads\WhatsApp Image 2024-11-29 at 09.13.40.jpeg" alt="Foto Abdullah Ali Havid">
+                <h3>ABDUL KAMALUDIN FATONI</h3>
+                <p>Kelas: 11 TKJ 1</p>
+                <P>Jenis Kelamin:L</P>
+                <P>NISN: 0071617040 </P>
+                <P>Tempat Lahir: TUBAN</P>
+                <P>Tanggal Lahir:2007-09-17</P>
+                <P>Alamat: Jalan RAYA SEMARANG </P>
+                <P>Kecamatan:JENU</P>
+            </div>
+            <div class="card">
+                <img src="c:\Users\pc 15\Downloads\WhatsApp Image 2024-11-29 at 09.13.41.jpeg" alt="Foto Achmad Rafellino Dwi Kurniawan">
+                <h3>ADITYA BAGUS RISFANY</h3>
+                <p>Kelas: 11 TKJ 1</p>
+                <P>Jenis Kelamin:L</P>
+                <P>NISN: 0072580060 </P>
+                <P>Tempat Lahir: TUBAN</P>
+                <P>Tanggal Lahir:2007-12-27</P>
+                <P>Alamat: DESA SIDING </P>
+                <P>Kecamatan:BANCAR</P>
+
+            </div>
+            <div class="card">
+                <img src="c:\Users\pc 15\Downloads\WhatsApp Image 2024-11-29 at 09.13.43.jpeg">
+                <h3>AFLAH AQNIYA</h3>
+                <p>Kelas: 11 TKJ 1</p>
+                <P>Jenis Kelamin:P</P>
+                <P>NISN: 0071317853  </P>
+                <P>Tempat Lahir: TUBAN</P>
+                <P>Tanggal Lahir:2007-12-05</P>
+                <P>Alamat: MANDER </P>
+                <P>Kecamatan:TAMBAKBOYO</P>
+
+            </div>
+            <div class="card">
+                <img src="c:\Users\pc 15\Downloads\WhatsApp Image 2024-11-29 at 09.13.45.jpeg">
+                <h3>AHMAD SAIFUL BAHRI</h3>
+                <p>Kelas: 11 TKJ 1</p>
+                <P>Jenis Kelamin:L</P>
+                <P>NISN:  0085423249</P>
+                <P>Tempat Lahir: TUBAN</P>
+                <P>Tanggal Lahir:2008-02-23</P>
+                <P>Alamat: KLABNAG</P>
+                <P>Kecamatan:BANCAR</P>
+            </div>
+            <div class="card">
+                <img src="c:\Users\pc 15\Downloads\WhatsApp Image 2024-11-29 at 09.13.48.jpeg "alt="Foto Ahmad Arif Muzaki">
+                <h3>AHMAD ZUHRUF NUKA AZZAKY</h3>
+                <P>Kelas: 11 TKJ 1</P>
+                <P>Jenis Kelamin: L</P>
+                <P>NISN:0087906577</P>
+                <P>Tempat Lahir: TUBAN</P>
+                <P>Tanggal Lahir:2008-02-23</P>
+                <P>Alamat: DSN.SOCOREJO</P>
+                <P>Kecamatan:JENU</P>      
+            </div>
+            <div class="card">
+                <img src="c:\Users\pc 15\Downloads\WhatsApp Image 2024-11-29 at 09.13.49.jpeg "alt="Foto Ahmad Fadli Nur Ibad">
+                <h3>ALIKA NOVI AULIA</h3>
+                <P>Kelas: 11 TKJ 1</P>
+                <P>Jenis Kelamin: P</P>
+                <P>NISN: 0088683839</P>
+                <P>Tempat Lahir: BERAU</P>
+                <P>Tanggal Lahir:2008-01-20</P>
+                <P>Alamat: MNUNGGAL SAMBALIUNG</P>
+                <P>Kecamatan:SAMBALIUNG</P>
+            </div>
+            <div class="card">
+                <img src="c:\Users\pc 15\Downloads\WhatsApp Image 2024-11-29 at 09.13.50.jpeg "alt="Foto Ahmad Risky Putra Indrawan">
+                <h3>AMELIA NUR JANNAH</h3>
+                <P>Kelas: 11 TKJ 1</P>
+                <P>Jenis Kelamin: P</P>
+                <P>NISN: 0074476038</P>
+                <P>Tempat Lahir: TUBAN</P>
+                <P>Tanggal Lahir:2007-03-06</P>
+                <P>Alamat: DS.PUGOH</P>
+                <P>Kecamatan:BANCAR</P>
+            </div>
+            <div class="card">
+                <img src="c:\Users\pc 15\Downloads\WhatsApp Image 2024-11-29 at 09.13.50 (1).jpeg "alt="Foto Ahmad Zaenal Prayogi">
+                <h3>ARIFATUN FAJR RAMADHANI</h3>
+                <P>Kelas: 11 TKJ 1</P>
+                <P>Jenis Kelamin: P</P>
+                <P>NISN: 00761965503</P>
+                <P>Tempat Lahir: TUBAN</P>
+                <P>Tanggal Lahir:2007-10-04</P>
+                <P>Alamat: GADON</P>
+                <P>Kecamatan:TAMBAKBOYO</P>
+            </div>
+            <div class="card">
+                <img src="c:\Users\pc 15\Downloads\WhatsApp Image 2024-11-29 at 09.48.13.jpeg"alt="Foto Ahmad Zaeni">
+                <h3>ARINI LIFTYAROTIN NADHIROH</h3>
+                <P>Kelas: 11 TKJ 1</P>
+                <P>Jenis Kelamin: P</P>
+                <P>NISN: 0082453097</P>
+                <P>Tempat Lahir: MOJOKERTO</P>
+                <P>Tanggal Lahir:2008-03-08</P>
+                <P>Alamat: JL.TIRTONADI</P>
+                <P>Kecamatan:JENU</P>
+            </div>
+            <div class="card">
+                <img src="c:\Users\pc 15\Downloads\WhatsApp Image 2024-11-29 at 09.48.13 (1).jpeg"alt="Foto Aldi Rahmaka">
+                <h3>ARMADA SASTRA HANDJAYA</h3>
+                <P>Kelas: 11 TKJ 1</P>
+                <P>Jenis Kelamin: L</P>
+                <P>NISN: 0071558997</P>
+                <P>Tempat Lahir: TUBAN</P>
+                <P>Tanggal Lahir:2007-09-30</P>
+                <P>Alamat: DSN.SOCOREJO</P>
+                <P>Kecamatan:JENU</P>
+            </div>
+            <div class="card">
+                <img src="c:\Users\pc 15\Downloads\WhatsApp Image 2024-11-29 at 09.14.01.jpeg"alt="Foto Aldi Rizki Utomo">
+                <h3>ASTY ANGGUN SILVIA MAHARANI</h3>
+                <P>Kelas: 11 TKJ 1</P>
+                <P>Jenis Kelamin: P</P>
+                <P>NISN: 0075346734</P>
+                <P>Tempat Lahir: TUBAN</P>
+                <P>Tanggal Lahir:2007-08-09</P>
+                <P>Alamat: DSN.MAMPON</P>
+                <P>Kecamatan:TAMBAKBOYO</P>
+            </div>
+            <div class="card">
+                <img src="c:\Users\pc 15\Downloads\WhatsApp Image 2024-11-29 at 09.49.52.jpeg"alt="Foto Alfin Maulana">
+                <h3>DEDE NOFITA SARI</h3>
+                <P>Kelas: 11 TKJ 1</P>
+                <P>Jenis Kelamin: P</P>
+                <P>NISN: 0071532754</P>
+                <p>Tempat Lahir: TUBAN</p>
+                <P>Tanggal Lahir:2007-12-10</P>
+                <P>Alamat: TASIKHARJO</P>
+                <P>Kecamatan:JENU</P>
+            </div>
+            <div class="card">
+                <img src="c:\Users\pc 15\Downloads\WhatsApp Image 2024-11-29 at 09.49.53.jpeg"alt="Foto Andik Saputro">
+                <h3>DIANI NUR SASMITA</h3>
+                <P>Kelas: 11 TKJ 1</P>
+                <P>Jenis Kelamin: P</P>
+                <P>NISN: 0085200332</P>
+                <P>Tempat Lahir: TUBAN</P>
+                <P>Tanggal Lahir:2008-04-30</P>
+                <P>Alamat: GLONGONG GEDE</P>
+                <P>Kecamatan:TAMBAKBOYO</P>  
+            </div>
+            <div class="card">
+                <img src="c:\Users\pc 15\Downloads\WhatsApp Image 2024-11-29 at 09.49.54.jpeg"alt="Foto Andika Adi Pratama">
+                <h3>DILA TRISTINA</h3>
+                <P>Kelas: 11 TKJ 1</P>
+                <P>Jenis Kelamin: P</P>
+                <P>NISN: 0088353361</P>
+                <P>Tempat Lahir: TUBAN</P>
+                <P>Tanggal Lahir: 2008-05-26</P>
+                <P>Alamat:TEMAJI</P>
+                <P>Kecamatan:JENU</P>
+            </div>
+            <div class="card">
+                <img src="c:\Users\pc 15\Downloads\WhatsApp Image 2024-11-29 at 09.49.54 (1).jpeg"alt="Foto Andika Ardi Anto">
+                <h3>DIMAS NUR IMAN</h3>
+                <P>Kelas: 11 TKJ 1</P>
+                <P>Jenis Kelamin: L</P>
+                <P>NISN: 0083928413</P>
+                <P>Tempat Lahir: TUBAN</P>
+                <P>Tanggal Lahir: 2008-06-16</P>
+                <P>Alamat: DSN.KETAPANG</P>
+                <P>Kecamatan:TAMBAKBOYO</P>
+            </div>
+            <div class="card">
+                <img src="c:\Users\pc 15\Downloads\WhatsApp Image 2024-11-29 at 09.14.03.jpeg"alt="Foto Ardian Dwi Nugroho">
+                <h3>DWI NUR CAHYATI</h3>
+                <P>Kelas: 11 TKJ 1</P>
+                <P>Jenis Kelamin: P</P>
+                <P>NISN: 0085208376</P>
+                <P>Tempat Lahir: TUBAN</P>
+                <P>Tanggal Lahir:2008-05-04</P>
+                <P>Alamat: KANOMAN</P>
+                <P>Kecamatan:KEREK</P>
+            </div>
+            <div class="card">
+                <img src="c:\Users\pc 15\Downloads\WhatsApp Image 2024-11-29 at 09.49.54 (2).jpeg"alt="Foto Azzam Maulana">
+                <h3>EVA NUR FEBIANO</h3>
+                <P>Kelas: 11 TKJ 1</P>
+                <P>Jenis Kelamin: P</P>
+                <P>NISN: 0078380580</P>
+                <P>Tempat Lahir: TUBAN</P>
+                <P>Tanggal Lahir:2007-02-05</P>
+                <P>Alamat: BOGOR KEREK</P>
+                <P>Kecamatan:BANCAR</P>
+            </div>
+            <div class="card">
+                <img src="c:\Users\pc 15\Downloads\WhatsApp Image 2024-11-29 at 09.49.55.jpeg"alt="Foto Bagus Candra">
+                <h3>FAHMI NURDIANTO</h3>
+                <P>Kelas: 11 TKJ 1</P>
+                <P>Jenis Kelamin: L</P>
+                <P>NISN: 0078435692</P>
+                <P>Tempat Lahir: TUBAN</P>
+                <P>Tanggal Lahir:2007-01-18</P>
+                <P>Alamat: JALAN RAYA DESA SOCOREJO</P>
+                <P>Kecamatan:JENU</P>
+            </div>
+            <div class="card">
+                <img src="c:\Users\pc 15\Downloads\WhatsApp Image 2024-11-29 at 09.49.56.jpeg"alt="Foto Bayu Aditya">
+                <h3>FATWA ZAKIYA LAYLI</h3>
+                <P>Kelas: 11 TKJ 1</P>
+                <P>Jenis Kelamin: P</P>
+                <P>NISN: 0076658721</P>
+                <P>Tempat Lahir: TUBAN</P>
+                <P>Tanggal Lahir:2007-05-10</P>
+                <P>Alamat: DSN.KETAPANG</P>
+                <P>Kecamatan:TAMBAKBOYO</P>
+            </div>
+            <div class="card">
+                <img src="c:\Users\pc 15\Downloads\WhatsApp Image 2024-11-29 at 10.06.10.jpeg"alt="Foto Bima Dwi Putra">
+                <h3>HIMMATUL ALIYAH</h3>
+                <P>Kelas: 11 TKJ 1</P>
+                <P>Jenis Kelamin: P</P>
+                <P>NISN: 0072329499</P>
+                <P>Tempat Lahir: TUBAN</P>
+                <P>Tanggal Lahir:2007-11-13</P>
+                <P>Alamat: DSN.SUMBER ARUM</P>
+                <P>Kecamatan:TAMBAKBOYO</P>
+            </div>
+            <div class="card">
+                <img src="c:\Users\pc 15\Downloads\WhatsApp Image 2024-11-29 at 10.06.10 (1).jpeg"alt="Foto Dela Dwi Sari">
+                <h3>ISTNANI AMA HIDAYATI</h3>
+                <P>Kelas: 11 TKJ 1</P>
+                <P>Jenis Kelamin: P</P> 
+                <P>Tempat Lahir: TUBAN</P>
+                <P>NISN: 0077766071</P>
+                <P>Tanggal Lahir:2007-07-20</P>
+                <P>Alamat: PULO GEDE</P>
+                <P>Kecamatan:TAMBAKBOYO</P>
+            </div>
+            <div class="card">
+                <img src="c:\Users\pc 15\Downloads\WhatsApp Image 2024-11-29 at 10.06.11.jpeg"alt="Foto Dimas Rian">
+                <H3>JESIKA ELIANA</h3>
+                <p>Kelas: 11 TKJ 1</p>
+                <p>Jenis Kelamin: P</p>
+                <p>NISN: 0073846105</p>
+                <p>Tempat Lahir: TUBAN</p>
+                <p>Tanggal Lahir:2007-03-24</p>
+                <p>Alamat: TEMAJI</p>
+                <p>Kecamatan:JENU</p>
+            </div>
+            <div class="card">
+                <img src="c:\Users\pc 15\Downloads\WhatsApp Image 2024-11-29 at 10.06.11 (1).jpeg"alt="Foto Eko Prasetyo">
+                <h3>JULIA SAFIRA NUR AZIZAH</h3>
+                <p>Kelas: 11 TKJ 1</p>
+                <p>Jenis Kelamin: P</p>
+                <p>NISN: 0079283304</p>
+                <p>Tempat Lahir: TUBAN</p>
+                <p>Tanggal Lahir:2007-07-14</p>
+                <p>Alamat: DSN.SOBONTORO</p>
+                <p>Kecamatan:TAMBAKBOYO</p>
+            </div>
+            <div class="card">
+                <img src="c:\Users\pc 15\Downloads\WhatsApp Image 2024-11-29 at 10.06.12.jpeg"alt="Foto Eko Rahman">
+                <h3>JULYA FANIANA SAFITRI</h3>
+                <p>Kelas: 11 TKJ 1</p>
+                <p>Jenis Kelamin: P</p>
+                <p>NISN: 0077413666</p>
+                <p>Tempat Lahir: TUBAN</p>
+                <p>Tanggal Lahir:2007-07-28</p>
+                <p>Alamat: TEMAJI</p>
+                <p>Kecamatan:JENU</p>
+            </div>
+            <div class="card">
+                <img src="c:\Users\pc 15\Downloads\WhatsApp Image 2024-11-29 at 10.14.32.jpeg"alt="Foto Evan Reza">
+                <h3>KHUSNIATULMARSA ULA RAMADANI</h3>
+                <p>Kelas: 11 TKJ 1</p>
+                <p>Jenis Kelamin: P</p>
+                <p>NISN: 0074078341</p>
+                <p>Tempat Lahir: TUBAN</p>
+                <p>Tanggal Lahir:2007-09-27</p>
+                <p>Alamat: DESA KAYEN</p>
+                <p>Kecamatan:BANCAR</p>
+            </div>
+            <div class="card">
+                <img src="c:\Users\pc 15\Downloads\WhatsApp Image 2024-11-29 at 10.14.38.jpeg"alt="Foto Fandi">
+                <h3>LAILA INTAN MAULIDIYAH</h3>
+                <p>Kelas: 11 TKJ 1</p>
+                <p>Jenis Kelamin: P</p>
+                <p>NISN: 0078120667</p>
+                <p>Tempat Lahir: TUBAN</p>
+                <p>Tanggal Lahir:2007-03-31</p>
+                <p>Alamat: DESA COKROWATI</p>
+                <p>Kecamatan:TAMBAKBOYO</p>
+            </div>
+            <div class="card">
+                <img src="c:\Users\pc 15\Downloads\WhatsApp Image 2024-11-29 at 10.14.47.jpeg"alt="Foto Farhan">
+                <h3>LULUK MIRNAWATI</h3>
+                <p>Kelas: 11 TKJ 1</p>
+                <p>Jenis Kelamin: P</p>
+                <p>NISN: 0087760617</p>
+                <p>Tempat Lahir: TUBAN</p>
+                <p>Tanggal Lahir:2008-12-09</p>
+                <p>Alamat: DS.SIDOMUKYO</p>
+                <p>Kecamatan:BANCAR</p>
+            </div>
+            <div class="card">
+                <img src="c:\Users\pc 15\Downloads\WhatsApp Image 2024-11-29 at 10.14.48.jpeg"alt="Foto Fathur">
+                <h3>LYNS ANNORA AURELIA</h3>
+                <p>Kelas: 11 TKJ 1</p>
+                <p>Jenis Kelamin: P</p>
+                <p>NISN: 0086000449</p>
+                <p>Tempat Lahir: TUBAN</p>
+                <p>Tanggal Lahir:2008-03-28</p>
+                <p>Alamat: DIKIR</p>
+                <p>Kecamatan:TAMBAKBOYO</p>
+            </div>
+            <div class="card">
+                <img src="c:\Users\pc 15\Downloads\WhatsApp Image 2024-11-29 at 10.14.49.jpeg"alt="Foto Geri">
+                <h3>MAFTUH AHNAN LABIB</h3>
+                <p>Kelas: 11 TKJ 1</p>
+                <p>Jenis Kelamin: L</p>
+                <p>NISN: 0085380027</p>
+                <p>Tempat Lahir: TUBAN</p>
+                <p>Tanggal Lahir:2008-04-24</p>
+                <p>Alamat: JALAN RAYA SEMARANG</p>
+                <p>Kecamatan:JENU</p>
+            </div>
+            <div class="card">
+                <img src="c:\Users\pc 15\Downloads\WhatsApp Image 2024-11-29 at 10.22.31.jpeg"alt="Foto Geri">
+                <h3>MILDA SAPUTRI</h3>
+                <p>Kelas: 11 TKJ 1</p>
+                <p>Jenis Kelamin: P</p>
+                <p>NISN: 0072441925</p>
+                <p>Tempat Lahir: TUBAN</p>
+                <p>Tanggal Lahir:2007-07-13</p>
+                <p>Alamat: JL WOLUTENGAH</p>
+                <p>Kecamatan:KEREK</p>
+            </div>
+            <div class="card">
+                <img src="c:\Users\pc 15\Downloads\WhatsApp Image 2024-11-29 at 10.22.32.jpeg"alt="Foto Geri">
+                <h3>MOCH. MUKHOROBIN</h3>
+                <p>Kelas: 11 TKJ 1</p>
+                <p>Jenis Kelamin: L</p>
+                <p>NISN: 0073373022</p>
+                <p>Tempat Lahir: TUBAN</p>
+                <p>Tanggal Lahir:2007-08-11</p>
+                <p>Alamat: TEMAJI</p>
+                <p>Kecamatan:JENU</p>
+            </div>
+            <div class="card">
+                <img src="c:\Users\pc 15\Downloads\WhatsApp Image 2024-11-29 at 10.22.32 (1).jpeg"alt="Foto Gilang">
+                <h3>MOCHAMAD RIZKY MAHESA FEBRIANSY</h3>
+                <p>Kelas: 11 TKJ 1</p>
+                <p>Jenis Kelamin: L</p>
+                <p>NISN: 0086418995</p>
+                <p>Tempat Lahir: TUBAN</p>
+                <p>Tanggal Lahir:2008-02-10</p>
+                <p>Alamat: DESA BANCAR</p>
+                <p>Kecamatan:BANCAR</p>
+           </div>
+           <div class="card">
+                <img src="c:\Users\pc 15\Downloads\WhatsApp Image 2024-11-29 at 10.22.32 (2).jpeg"alt="Foto Gilang">
+                <h3>NABILA FU`ADAH</h3>
+                <p>Kelas: 11 TKJ 1</p>
+                <p>Jenis Kelamin: P</p>
+                <p>NISN: 0073497043</p>
+                <p>Tempat Lahir: TUBAN</p>
+                <p>Tanggal Lahir:2007-12-17</p>
+                <p>Alamat: MANDER-KEREK</p>
+                <p>Kecamatan:TAMBAKBOYO</p>
+           </div>
+           <div class="card">
+             <img src="c:\Users\pc 15\Downloads\WhatsApp Image 2024-11-29 at 10.22.33.jpeg"alt="Foto Gilang">
+             <h3>NILA NUR CAHYANI</h3>
+             <p>Kelas: 11 TKJ 1</p>
+             <p>Jenis Kelamin: P</p>
+             <p>NISN: 0076936706</p>
+             <p>Tempat Lahir: TUBAN</p>
+             <p>Tanggal Lahir:2007-04-11</p>
+             <p>Alamat: DUSUN AWAR AWAR</p>
+             <p>Kecamatan:JENU</p>
+        </div>
+    </div>
+    </div>
+
+
+  
+    <div id="guruCards" class="card-container">
+        <div class="card">
+            <img src="10 int.jpeg" alt="Foto Nuranisah">
+            <h3>Bu intan</h3>
+            <p>Jabatan: Guru kepala jurusan</p>
+        </div>
+    <div class="card">
+            <img src="bu fida.jpeg" alt="Foto Nuranisah">
+            <h3>Bu fida</h3>
+            <p>Jabatan: Guru PKK</p>
+        </div>
+    <div class="card">
+            <img src="21 nor.jpeg" alt="Foto Nuranisah">
+            <h3>Pak Nordin</h3>
+            <p>Jabatan: Guru PJOK</p>
+        </div>
+    <div class="card">
+            <img src="46 yuli.jpeg" alt="Foto Nuranisah">
+            <h3>Bu Yuli</h3>
+            <p>Jabatan: Guru Sejarah</p>
+        </div>
+    <div class="card">
+            <img src="59 bu lla.jpeg" alt="Foto Nuranisah">
+            <h3>Bu Lala</h3>
+            <p>Jabatan: Guru produktif pilihan tkj</p>
+        </div>
+    <div class="card">
+            <img src="8 ress.jpeg" alt="Foto Nuranisah">
+            <h3>Bu restu</h3>
+            <p>Jabatan: Guru Matematika</p>
+        </div>    
+    <div class="card">
+            <img src="54 rid.jpeg" alt="Foto Nuranisah">
+            <h3>Bu ridha</h3>
+            <p>Jabatan: Guru bahasa jawa</p>
+        </div>
+    <div class="card">
+            <img src="c:\Users\pc 15\Downloads\WhatsApp Image 2024-12-05 at 09.10.14.jpeg" alt="Foto Nuranisah">
+            <h3>Bu Muhimatul Ifadah</h3>
+            <p>Jabatan: Guru Bahasa Inggris</p>
+        </div>
+    <div class="card">
+            <img src="c:\Users\pc 15\Downloads\WhatsApp Image 2024-12-05 at 09.11.21.jpeg" alt="Foto Nuranisah">
+            <h3>Bu eti</h3>
+            <p>Jabatan: Guru PPKN</p>
+        </div>
+    <div class="card">
+            <img src="4 mukh.jpeg" alt="Foto Nuranisah">
+            <h3>Pak muklis</h3>
+            <p>Jabatan: Guru produktif pilihan tkj</p>
+        </div>
+    <div class="card">
+            <img src="c:\Users\pc 15\Documents\49.jpeg"alt="Foto Nuranisah">
+            <h3>Bu novita</h3>
+            <p>Jabatan: Guru BK</p>
+        </div>
+    <div class="card">
+            <img src="c:\Users\pc 15\Documents\shoffa.jpeg"alt="Foto Nuranisah">
+            <h3>Pak Shofa</h3>
+            <p>Jabatan: Guru Bahasa Indonesia</p>
+        </div>
+    <div class="card">
+            <img src="c:\Users\pc 15\Downloads\WhatsApp Image 2024-11-29 at 10.31.29.jpeg"alt="Foto Nuranisah">
+            <h3>Pak Hukam</h3>
+            <p>Jabatan: Guru PAI</p>
+        </div>
+     <div class="card">
+            <img src="c:\Users\pc 15\Documents\atik.jpeg"alt="Foto Nuranisah">
+            <h3>Bu Atik</h3>
+            <p>Jabatan: Guru produktif pilihan tkj</p>
+       </div>
+    </div>
+
+
+    <div id="strukturCards" class="card-container">
+        <div class="card">
+            <h3>Wali Kelas</h3>
+            <p>Nama: CRISTIAN SETIA ATIK</p>
+            <h3>Ketua Kelas</h3>
+            <p>Nama: JESIKA ELIANA</p>
+            <h3>Wakil Ketua</h3>
+            <p>Nama: DIMAS NUR IMAN</p>
+        </div>
+
+        <div class="card">
+            <h3>Sekretaris 1</h3>
+            <p>Nama: MOCH MUKHOROBIN</p>
+            <h3>Sekretaris 2</h3>
+            <p>Nama: ALIKA NOVI AULIA</p>
+            <h3>Bendahara 1</h3>
+            <p>Nama: DEDE NOFITA SARI</p>
+            <h3>Bendahara 2</h3>
+            <p>Nama: ADITYA BAGUS RISFANY</p>
+        </div>
+    </div>
+
+<div id="gallery" class="gallery">
+    <img src="c:\Users\pc 15\Downloads\WhatsApp Image 2024-11-29 at 10.47.56.jpeg"alt="Foto Kegiatan 1">
+    <img src="c:\Users\pc 15\Downloads\WhatsApp Image 2024-11-29 at 11.16.17.jpeg"alt="Foto Kegiatan 2">
+    <img src="c:\Users\pc 15\Downloads\WhatsApp Image 2024-11-29 at 10.48.15.jpeg"alt="Foto Kegiatan 3">
+</div>
+    <style>
+        body {
+            font-family: 'Roboto', sans-serif;
+            margin: 0;
+            padding: 20px;
+            background-color: #eef2f3;
+        }
+        h1 {
+            text-align: center;
+            color: #333;
+        }
+        .card-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 20px;
+            max-width: 900px;
+            margin: auto;
+        }
+        .card {
+            background: #ffffff;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+            text-align: center;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
+        }
+        .card h3 {
+            margin-top: 0;
+            color: #007acc;
+        }
+        .card p {
+            margin: 5px 0;
+            color: #555;
+        }
+    </style>
+
+    <div id="piketCards" class="card-container">
+        <div class="card">
+            <h3>Senin</h3>
+            <p>Kamal</p>
+            <p>Aflah</p>
+            <p>Saiful</p>
+            <p>Zaky</p>
+            <p>Amel</p>
+            <p>Fara</p>
+        </div>
+        <div class="card">
+            <h3>Selasa</h3>
+            <p>Arin</p>
+            <p>Arsas</p>
+            <p>Anggun</p>
+            <p>Mita</p>
+            <p>Dilla</p>
+            <p>Dwi</p>
+        </div>
+        <div class="card">
+            <h3>Rabu</h3>
+            <p>Eva</p>
+            <p>Fahmi</p>
+            <p>Layli</p>
+            <p>Aliyah</p>
+            <p>Ani</p>
+            <p>Fira</p>
+        </div>
+        <div class="card">
+            <h3>Kamis</h3>
+            <p>Fania</p>
+            <p>Marsa</p>
+            <p>Intan</p>
+            <p>Luluk</p>
+            <p>Ahnan</p>
+        </div>
+        <div class="card">
+            <h3>Jumat</h3>
+            <p>Lyns</p>
+            <p>Milda</p>
+            <p>Mahesa</p>
+            <p>Nabila</p>
+            <p>Nila</p>
+        </div>
+    </div>
+
+
+
+  
+    
+ 
+    <style>
+        body {
+            font-family: 'Roboto', sans-serif;
+            margin: 0;
+            padding: 20px;
+            background-color: #121313;
+        }
+        h1 {
+            text-align: center;
+            color: #333;
+        }
+        .card-container {
+            max-width: 800px;
+            margin: auto;
+            background: #25709b;
+            border-radius: 10px;
+            padding: 20px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+        th, td {
+            text-align: left;
+            padding: 10px;
+            border: 1px solid #111111;
+        }
+        th {
+            background-color: #007acc;
+            color: #140303;
+        }
+        tr:nth-child(even) {
+            background-color: #f9f9f9;
+        }
+        tr:hover {
+            background-color: #f1f1f1;
+        }
+    </style>
+
+    <div id="jadwalPelajaran" class="card-container">
+        <table>
+            <tr>
+                <th>Hari</th>
+                <th>Pelajaran</th>
+                <th>Waktu</th>
+            </tr>
+            <tr>
+                <td>Senin</td>
+                <td>Produktif TKJ</td>
+                <td>08:00 - 09:30</td>
+            </tr>
+            <tr>
+                <td>Senin</td>
+                <td>Matematika</td>
+                <td>09:45 - 11:15</td>
+            </tr>
+            <tr>
+                <td>Selasa</td>
+                <td>Bahasa Jawa</td>
+                <td>07:00 - 08:20</td>
+            </tr>
+            <tr>
+                <td>Selasa</td>
+                <td>PJOK</td>
+                <td>08:20 - 09:40</td>
+            </tr>
+            <tr>
+                <td>Selasa</td>
+                <td>Bahasa Inggris</td>
+                <td>10:00 - 11:20</td>
+            </tr>
+            <tr>
+                <td>Rabu</td>
+                <td>Bahasa Indonesia</td>
+                <td>08:00 - 09:30</td>
+            </tr>
+            <tr>
+                <td>Rabu</td>
+                <td>B6-TKJ</td>
+                <td>09:45 - 11:15</td>
+            </tr>
+            <tr>
+                <td>Kamis</td>
+                <td>B6-TKJ</td>
+                <td>08:00 - 09:30</td>
+            </tr>
+            <tr>
+                <td>Kamis</td>
+                <td>B8A-TKJ</td>
+                <td>09:45 - 11:15</td>
+            </tr>
+            <tr>
+                <td>Jumat</td>
+                <td>B7-TKJ</td>
+                <td>08:00 - 09:30</td>
+            </tr>
+            <tr>
+                <td>Jumat</td>
+                <td>B6-TKJ</td>
+                <td>09:45 - 11:15</td>
+            </tr>
+        </table>
+    </div>
+
+        <div id="kegiatanKelas" class="card-container">
+            <h3>Kegiatan Kelas</h3>
+            <p>makan bersama </p>
+            <p>kunjunggan industri</p>  
+            <p>istiqosah</p>  
+        </div>
+    
+
+
+</body>
+</html>
